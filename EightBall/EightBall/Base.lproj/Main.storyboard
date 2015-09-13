@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eight-ball" translatesAutoresizingMaskIntoConstraints="NO" id="nx0-fY-Vde">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="LEc-gC-EhU"/>
+                                    <constraint firstAttribute="width" constant="320" id="TQO-Sd-Omu"/>
+                                </constraints>
+                            </imageView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="auC-R6-O2i">
+                                <rect key="frame" x="220" y="244" width="160" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Jn6-8a-ZFh"/>
+                                    <constraint firstAttribute="height" constant="112" id="iCU-Uq-3PI"/>
+                                </constraints>
+                                <string key="text">SHAKE
+FOR
+ANSWER</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nx0-fY-Vde" secondAttribute="centerX" id="Q4C-DM-osb"/>
+                            <constraint firstAttribute="centerY" secondItem="auC-R6-O2i" secondAttribute="centerY" id="QGm-zS-c20"/>
+                            <constraint firstAttribute="centerX" secondItem="auC-R6-O2i" secondAttribute="centerX" id="RfA-pr-cMN"/>
+                            <constraint firstAttribute="centerY" secondItem="nx0-fY-Vde" secondAttribute="centerY" id="o5j-e0-eIF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerView" destination="auC-R6-O2i" id="W4t-F7-MTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eight-ball" width="320" height="320"/>
+    </resources>
+</document>
