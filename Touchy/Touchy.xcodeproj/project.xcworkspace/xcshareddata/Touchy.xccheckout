@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BC6D03E6-EB87-4989-BF71-1C61C1BD51D1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Touchy</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9D6F4AA12122632EBB04E4344A707805252FEC39</key>
 		<string>https://github.com/2husher/LearniOS8AppDev.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Touchy/Touchy.xcodeproj/project.xcworkspace</string>
+	<string>Touchy/Touchy.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9D6F4AA12122632EBB04E4344A707805252FEC39</key>

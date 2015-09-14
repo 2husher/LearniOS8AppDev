@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>55142B02-D6DC-42E1-93CF-A123476FA480</string>
+	<string>3F242990-C703-4D75-8008-ED20CB37E156</string>
 	<key>IDESourceControlProjectName</key>
-	<string>EightBall</string>
+	<string>Surrealists</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9D6F4AA12122632EBB04E4344A707805252FEC39</key>
 		<string>https://github.com/2husher/LearniOS8AppDev.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EightBall/EightBall.xcodeproj</string>
+	<string>Surrealists/Surrealists.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9D6F4AA12122632EBB04E4344A707805252FEC39</key>
