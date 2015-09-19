@@ -1,1 +1,10 @@
 */*.xcodeproj/project.xcworkspace/xcuserdata/*
+
+
+xcuserdata/
+
+*.xcuserstate
+
+Shorty/Shorty.xcodeproj/project.xcworkspace/xcuserdata/X.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.txt
