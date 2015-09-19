@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#define kImageKey       @"image"
+#define kNameKey        @"name"
+#define kDescriptionKey @"description"
+
 @interface CharacterTableViewController : UITableViewController
+
+@property (strong,nonatomic) NSArray *tableData;
 
 @end

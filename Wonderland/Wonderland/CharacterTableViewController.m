@@ -7,6 +7,7 @@
 //
 
 #import "CharacterTableViewController.h"
+#import "CharacterDetailViewController.h"
 
 @interface CharacterTableViewController ()
 
@@ -16,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSURL *dataURL = [[NSBundle mainBundle] URLForResource:@"Characters"
+                                             withExtension:@"nsarray"];
+    self.tableData = [NSArray arrayWithContentsOfURL:dataURL];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,26 +37,26 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.tableData.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellId = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId
+                                                            forIndexPath:indexPath];
+    NSDictionary *characterInfo = _tableData[indexPath.row];
+    cell.textLabel.text = characterInfo[kNameKey];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -86,6 +91,15 @@
     return YES;
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString: @"detail"])
+    {
+        CharacterDetailViewController *detailsController = (CharacterDetailViewController *)segue.destinationViewController;
+        detailsController.characterInfo = _tableData[self.tableView.indexPathForSelectedRow.row];
+    }
+}
 
 /*
 #pragma mark - Navigation

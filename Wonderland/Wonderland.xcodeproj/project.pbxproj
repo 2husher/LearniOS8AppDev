@@ -19,6 +19,11 @@
 		17D28C871BAA24030026F8B6 /* Characters.nsarray in Resources */ = {isa = PBXBuildFile; fileRef = 17D28C851BAA24030026F8B6 /* Characters.nsarray */; };
 		17D28C8A1BAA31B20026F8B6 /* CharacterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D28C891BAA31B20026F8B6 /* CharacterTableViewController.m */; };
 		17D28C901BAA32100026F8B6 /* CharacterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D28C8F1BAA32100026F8B6 /* CharacterDetailViewController.m */; };
+		17F2E0121BAC4C82000CB0F9 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F2E0111BAC4C82000CB0F9 /* BookViewController.m */; };
+		17F2E0151BAC4C98000CB0F9 /* BookDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F2E0141BAC4C98000CB0F9 /* BookDataSource.m */; };
+		17F2E0181BAC4CA9000CB0F9 /* Paginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F2E0171BAC4CA9000CB0F9 /* Paginator.m */; };
+		17F2E01B1BAC4CC1000CB0F9 /* OnePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F2E01A1BAC4CC1000CB0F9 /* OnePageViewController.m */; };
+		17F2E01E1BAC4CD6000CB0F9 /* OnePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F2E01D1BAC4CD6000CB0F9 /* OnePageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		17D28C891BAA31B20026F8B6 /* CharacterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterTableViewController.m; sourceTree = "<group>"; };
 		17D28C8E1BAA32100026F8B6 /* CharacterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDetailViewController.h; sourceTree = "<group>"; };
 		17D28C8F1BAA32100026F8B6 /* CharacterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDetailViewController.m; sourceTree = "<group>"; };
+		17F2E0101BAC4C82000CB0F9 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		17F2E0111BAC4C82000CB0F9 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		17F2E0131BAC4C98000CB0F9 /* BookDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDataSource.h; sourceTree = "<group>"; };
+		17F2E0141BAC4C98000CB0F9 /* BookDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDataSource.m; sourceTree = "<group>"; };
+		17F2E0161BAC4CA9000CB0F9 /* Paginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paginator.h; sourceTree = "<group>"; };
+		17F2E0171BAC4CA9000CB0F9 /* Paginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paginator.m; sourceTree = "<group>"; };
+		17F2E0191BAC4CC1000CB0F9 /* OnePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnePageViewController.h; sourceTree = "<group>"; };
+		17F2E01A1BAC4CC1000CB0F9 /* OnePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnePageViewController.m; sourceTree = "<group>"; };
+		17F2E01C1BAC4CD6000CB0F9 /* OnePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnePageView.h; sourceTree = "<group>"; };
+		17F2E01D1BAC4CD6000CB0F9 /* OnePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnePageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +124,16 @@
 				17D28C831BAA24030026F8B6 /* Data Resources */,
 				17D28C6C1BAA237E0026F8B6 /* LaunchScreen.xib */,
 				17D28C5A1BAA237E0026F8B6 /* Supporting Files */,
+				17F2E0101BAC4C82000CB0F9 /* BookViewController.h */,
+				17F2E0111BAC4C82000CB0F9 /* BookViewController.m */,
+				17F2E0131BAC4C98000CB0F9 /* BookDataSource.h */,
+				17F2E0141BAC4C98000CB0F9 /* BookDataSource.m */,
+				17F2E0161BAC4CA9000CB0F9 /* Paginator.h */,
+				17F2E0171BAC4CA9000CB0F9 /* Paginator.m */,
+				17F2E0191BAC4CC1000CB0F9 /* OnePageViewController.h */,
+				17F2E01A1BAC4CC1000CB0F9 /* OnePageViewController.m */,
+				17F2E01C1BAC4CD6000CB0F9 /* OnePageView.h */,
+				17F2E01D1BAC4CD6000CB0F9 /* OnePageView.m */,
 			);
 			path = Wonderland;
 			sourceTree = "<group>";
@@ -250,11 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F2E01E1BAC4CD6000CB0F9 /* OnePageView.m in Sources */,
 				17D28C661BAA237E0026F8B6 /* SecondViewController.m in Sources */,
+				17F2E0151BAC4C98000CB0F9 /* BookDataSource.m in Sources */,
+				17F2E0181BAC4CA9000CB0F9 /* Paginator.m in Sources */,
 				17D28C601BAA237E0026F8B6 /* AppDelegate.m in Sources */,
+				17F2E0121BAC4C82000CB0F9 /* BookViewController.m in Sources */,
 				17D28C631BAA237E0026F8B6 /* FirstViewController.m in Sources */,
 				17D28C5D1BAA237E0026F8B6 /* main.m in Sources */,
 				17D28C8A1BAA31B20026F8B6 /* CharacterTableViewController.m in Sources */,
+				17F2E01B1BAC4CC1000CB0F9 /* OnePageViewController.m in Sources */,
 				17D28C901BAA32100026F8B6 /* CharacterDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +482,7 @@
 				17D28C7F1BAA237F0026F8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17D28C801BAA237F0026F8B6 /* Build configuration list for PBXNativeTarget "WonderlandTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +491,7 @@
 				17D28C821BAA237F0026F8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

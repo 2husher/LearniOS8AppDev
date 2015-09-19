@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Welcome-->
@@ -35,14 +36,27 @@
                                     <constraint firstAttribute="height" constant="300" id="Z7j-Th-S0t"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-IU-dEp">
+                                <rect key="frame" x="357" y="455" width="22" height="22"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bDz-VT-gUU" kind="popoverPresentation" identifier="info" popoverAnchorView="Akp-IU-dEp" id="CUu-HJ-6cy">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ITb-UG-7nr" secondAttribute="centerX" id="76p-U3-cqo"/>
                             <constraint firstItem="Rbl-wI-Vqx" firstAttribute="top" secondItem="ITb-UG-7nr" secondAttribute="bottom" constant="30" id="8pG-fr-9gb"/>
+                            <constraint firstItem="itH-Z2-wgL" firstAttribute="centerY" secondItem="Akp-IU-dEp" secondAttribute="centerY" id="FZm-37-8x6"/>
                             <constraint firstAttribute="centerX" secondItem="Rbl-wI-Vqx" secondAttribute="centerX" id="L2v-0P-odW"/>
                             <constraint firstAttribute="centerY" secondItem="Rbl-wI-Vqx" secondAttribute="centerY" id="WyO-K7-apr"/>
                             <constraint firstItem="itH-Z2-wgL" firstAttribute="top" secondItem="Rbl-wI-Vqx" secondAttribute="bottom" constant="8" id="em7-KM-2UP"/>
+                            <constraint firstItem="Akp-IU-dEp" firstAttribute="leading" secondItem="itH-Z2-wgL" secondAttribute="trailing" constant="8" symbolic="YES" id="mSz-bH-J08"/>
                             <constraint firstAttribute="centerX" secondItem="itH-Z2-wgL" secondAttribute="centerX" id="xoQ-V3-t69"/>
                         </constraints>
                     </view>
@@ -50,7 +64,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-319"/>
+            <point key="canvasLocation" x="839" y="-299"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b58-pU-cfZ">
+            <objects>
+                <viewController id="bDz-VT-gUU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5cZ-Da-xMO"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1G-KD-qFi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b5i-5c-lUS">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLV-cD-xdE">
+                                <rect key="frame" x="16" y="292" width="218" height="43"/>
+                                <string key="text">Lewis Carroll
+a.k.a. Charles Lutwidge Dodgson
+27 January 1832 – 14 January 1898</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-charles" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-zx-9RC">
+                                <rect key="frame" x="43" y="40" width="164" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="ZMF-ZO-6L7"/>
+                                    <constraint firstAttribute="width" constant="164" id="x4g-8w-DGr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dLV-cD-xdE" firstAttribute="top" secondItem="yTB-zx-9RC" secondAttribute="bottom" constant="8" id="Lz6-8q-eW4"/>
+                            <constraint firstAttribute="centerX" secondItem="yTB-zx-9RC" secondAttribute="centerX" id="Pf0-91-8TK"/>
+                            <constraint firstItem="yTB-zx-9RC" firstAttribute="top" secondItem="5cZ-Da-xMO" secondAttribute="bottom" constant="20" id="SAJ-vk-Cqi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dLV-cD-xdE" secondAttribute="trailing" id="YxC-l3-6mI"/>
+                            <constraint firstItem="dLV-cD-xdE" firstAttribute="leading" secondItem="b5i-5c-lUS" secondAttribute="leadingMargin" id="lNz-vS-sNd"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="250" height="340"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="250" height="340"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKF-7o-Mog" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="-328"/>
         </scene>
         <!--CharacterTableViewController-->
         <scene sceneID="ahE-oH-chq">
@@ -61,11 +121,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9vr-tD-Yhh">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="loG-59-Sqg" style="IBUITableViewCellStyleDefault" id="9vr-tD-Yhh">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9vr-tD-Yhh" id="OaO-Yy-0NV">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="loG-59-Sqg">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zso-RS-Sid" kind="show" identifier="detail" id="JyP-lb-UEk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -137,6 +208,66 @@
             </objects>
             <point key="canvasLocation" x="800" y="511"/>
         </scene>
+        <!--Book-->
+        <scene sceneID="EsM-LL-cNg">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zRp-Ij-tvU" customClass="BookViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Book" image="tab-book" id="bYy-Gq-TxN"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzD-NH-SZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="1351"/>
+        </scene>
+        <!--One Page View Controller-->
+        <scene sceneID="9le-MO-Tpn">
+            <objects>
+                <viewController storyboardIdentifier="OnePage" id="6My-zw-RbZ" customClass="OnePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2a-tO-6Lh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dgr-2B-wFg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbq-FT-41o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice’s Adventures in Wonderland" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-bm-mtX">
+                                <rect key="frame" x="186" y="28" width="229" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2z-GN-JMh">
+                                <rect key="frame" x="286" y="566" width="29" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uga-y6-NTL" customClass="OnePageView">
+                                <rect key="frame" x="36" y="66" width="528" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uga-y6-NTL" firstAttribute="leading" secondItem="bbq-FT-41o" secondAttribute="leadingMargin" constant="20" id="3x5-lr-GJ0"/>
+                            <constraint firstItem="5hh-bm-mtX" firstAttribute="top" secondItem="B2a-tO-6Lh" secondAttribute="bottom" constant="8" id="6rM-Be-UXZ"/>
+                            <constraint firstItem="a2z-GN-JMh" firstAttribute="top" secondItem="uga-y6-NTL" secondAttribute="bottom" constant="20" id="FOl-gz-lih"/>
+                            <constraint firstAttribute="centerX" secondItem="5hh-bm-mtX" secondAttribute="centerX" id="Pav-xG-4X3"/>
+                            <constraint firstItem="dgr-2B-wFg" firstAttribute="top" secondItem="a2z-GN-JMh" secondAttribute="bottom" constant="20" id="jHd-tS-Dsr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uga-y6-NTL" secondAttribute="trailing" constant="20" id="tFy-XU-3ZI"/>
+                            <constraint firstAttribute="centerX" secondItem="a2z-GN-JMh" secondAttribute="centerX" id="wIr-7J-hJh"/>
+                            <constraint firstItem="uga-y6-NTL" firstAttribute="top" secondItem="5hh-bm-mtX" secondAttribute="bottom" constant="20" id="za9-cu-f1q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageLabel" destination="a2z-GN-JMh" id="UhX-rV-5R1"/>
+                        <outlet property="textView" destination="uga-y6-NTL" id="6Pk-er-uOZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24v-LF-PIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="1351"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -150,6 +281,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Yhh-mA-IYR" kind="relationship" relationship="viewControllers" id="ALa-CE-PrV"/>
+                        <segue destination="zRp-Ij-tvU" kind="relationship" relationship="viewControllers" id="Ets-5u-Y8G"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -159,6 +291,8 @@
     </scenes>
     <resources>
         <image name="info-alice" width="353" height="480"/>
+        <image name="info-charles" width="328" height="488"/>
+        <image name="tab-book" width="30" height="30"/>
         <image name="tab-chars" width="30" height="30"/>
         <image name="tab-info" width="30" height="30"/>
     </resources>

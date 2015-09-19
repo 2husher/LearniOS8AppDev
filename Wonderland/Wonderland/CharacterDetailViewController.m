@@ -7,6 +7,7 @@
 //
 
 #import "CharacterDetailViewController.h"
+#import "CharacterTableViewController.h"
 
 @interface CharacterDetailViewController ()
 
@@ -22,6 +23,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.nameLabel.text = _characterInfo[kNameKey];
+    self.imageView.image = [UIImage imageNamed:_characterInfo[kImageKey]];
+    self.descriptionView.text = _characterInfo[kDescriptionKey];
 }
 
 /*
