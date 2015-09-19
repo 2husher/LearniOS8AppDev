@@ -13,7 +13,8 @@
 - (id)initWithName:(NSString*)name location:(NSString*)location
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.name = name;
         self.location = location;
     }
@@ -23,8 +24,8 @@
 - (void)postDidChangeNotification
 {
     [[NSNotificationCenter defaultCenter]
-     postNotificationName:kWhatsitDidChangeNotification
-     object:self];
+        postNotificationName:kWhatsitDidChangeNotification
+        object:self];
 }
 
 @end

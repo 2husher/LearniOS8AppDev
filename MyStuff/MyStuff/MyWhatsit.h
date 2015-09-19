@@ -16,7 +16,6 @@
 @property (strong,nonatomic) NSString *location;
 
 - (id)initWithName:(NSString*)name location:(NSString*)location;
-
 - (void)postDidChangeNotification;
 
 @end
