@@ -56,19 +56,19 @@ static NSString* gAnswers[] = {
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if (motion==UIEventSubtypeMotionShake)
+    if (motion == UIEventSubtypeMotionShake)
         [self fadeFortune];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if (motion==UIEventSubtypeMotionShake)
+    if (motion == UIEventSubtypeMotionShake)
         [self newFortune];
 }
 
 - (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if (motion==UIEventSubtypeMotionShake)
+    if (motion == UIEventSubtypeMotionShake)
         [self newFortune];
 }
 
