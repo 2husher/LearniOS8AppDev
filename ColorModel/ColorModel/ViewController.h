@@ -18,6 +18,8 @@
 @property (weak,nonatomic) IBOutlet UILabel *saturationLabel;
 @property (weak,nonatomic) IBOutlet UILabel *brightnessLabel;
 
+@property (weak,nonatomic) IBOutlet UILabel *webLabel;
+
 - (IBAction)changeHue:(UISlider *)sender;
 - (IBAction)changeSaturation:(UISlider *)sender;
 - (IBAction)changeBrightness:(UISlider *)sender;
