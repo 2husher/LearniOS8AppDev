@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Color.h"
+#import "ColorView.h"
 
 @interface ViewController : UIViewController
 
 @property (strong,nonatomic) Color *colorModel;
-@property (weak,nonatomic) IBOutlet UIView *colorView;
+@property (weak,nonatomic) IBOutlet ColorView *colorView;
 
 @property (weak,nonatomic) IBOutlet UILabel *hueLabel;
 @property (weak,nonatomic) IBOutlet UILabel *saturationLabel;

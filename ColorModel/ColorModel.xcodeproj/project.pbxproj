@@ -15,6 +15,7 @@
 		1788D53F1BAEF569007A716A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1788D53D1BAEF569007A716A /* LaunchScreen.xib */; };
 		1788D54B1BAEF569007A716A /* ColorModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788D54A1BAEF569007A716A /* ColorModelTests.m */; };
 		1788D5561BAEF5D8007A716A /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788D5551BAEF5D8007A716A /* Color.m */; };
+		1788D5591BAF34AE007A716A /* ColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788D5581BAF34AE007A716A /* ColorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		1788D54A1BAEF569007A716A /* ColorModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorModelTests.m; sourceTree = "<group>"; };
 		1788D5541BAEF5D8007A716A /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		1788D5551BAEF5D8007A716A /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		1788D5571BAF34AE007A716A /* ColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorView.h; sourceTree = "<group>"; };
+		1788D5581BAF34AE007A716A /* ColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				1788D52E1BAEF569007A716A /* Supporting Files */,
 				1788D5541BAEF5D8007A716A /* Color.h */,
 				1788D5551BAEF5D8007A716A /* Color.m */,
+				1788D5571BAF34AE007A716A /* ColorView.h */,
+				1788D5581BAF34AE007A716A /* ColorView.m */,
 			);
 			path = ColorModel;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1788D5591BAF34AE007A716A /* ColorView.m in Sources */,
 				1788D5371BAEF569007A716A /* ViewController.m in Sources */,
 				1788D5561BAEF5D8007A716A /* Color.m in Sources */,
 				1788D5341BAEF569007A716A /* AppDelegate.m in Sources */,

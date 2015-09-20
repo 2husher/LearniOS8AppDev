@@ -34,7 +34,8 @@
 
 - (void)updateColor
 {
-    self.colorView.backgroundColor = self.colorModel.color;
+    [self.colorView setNeedsDisplay];
+    //self.colorView.backgroundColor = self.colorModel.color;
     self.hueLabel.text = [NSString stringWithFormat:@"%.0f\u00b0",
                           self.colorModel.hue];
     self.saturationLabel.text = [NSString stringWithFormat:@"%.0f%%",
@@ -53,6 +54,7 @@
 {
     [super viewDidLoad];
     self.colorModel = [Color new];
+    self.colorView.colorModel = self.colorModel;
 }
 
 - (void)didReceiveMemoryWarning
