@@ -14,6 +14,10 @@
 @property (strong,nonatomic) Color *colorModel;
 @property (weak,nonatomic) IBOutlet UIView *colorView;
 
+@property (weak,nonatomic) IBOutlet UILabel *hueLabel;
+@property (weak,nonatomic) IBOutlet UILabel *saturationLabel;
+@property (weak,nonatomic) IBOutlet UILabel *brightnessLabel;
+
 - (IBAction)changeHue:(UISlider *)sender;
 - (IBAction)changeSaturation:(UISlider *)sender;
 - (IBAction)changeBrightness:(UISlider *)sender;
