@@ -60,29 +60,65 @@
                                     <action selector="changedDetail:" destination="JEX-9P-axG" eventType="editingChanged" id="KYb-eL-VfU"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k67-Y7-4Yq">
+                                <rect key="frame" x="16" y="206" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-IO-4Ca">
+                                <rect key="frame" x="185" y="235" width="230" height="230"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="dOC-5H-7YL"/>
+                                    <constraint firstAttribute="width" constant="230" id="h1t-Fi-hCy"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="f0J-k7-xf2" appends="YES" id="wzc-al-By5"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Nml-jm-teH" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="0XO-m7-DEA"/>
                             <constraint firstItem="akL-nB-7dg" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="0lm-SJ-XMN"/>
+                            <constraint firstItem="k67-Y7-4Yq" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="45d-4N-P7d"/>
+                            <constraint firstAttribute="centerX" secondItem="NhQ-IO-4Ca" secondAttribute="centerX" id="5wV-RV-Wdo"/>
                             <constraint firstItem="akL-nB-7dg" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="6d0-ke-hkk"/>
                             <constraint firstItem="tq3-1P-84U" firstAttribute="top" secondItem="Nml-jm-teH" secondAttribute="bottom" constant="8" id="8ow-7e-ldV"/>
+                            <constraint firstItem="NhQ-IO-4Ca" firstAttribute="top" secondItem="k67-Y7-4Yq" secondAttribute="bottom" constant="8" id="KcV-d5-A4Z"/>
                             <constraint firstItem="tq3-1P-84U" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="O6f-lB-09e"/>
                             <constraint firstItem="Nml-jm-teH" firstAttribute="top" secondItem="akL-nB-7dg" secondAttribute="bottom" constant="8" id="cx1-Fq-JcN"/>
                             <constraint firstItem="wYr-Rd-Nfa" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="fmH-FP-tfZ"/>
                             <constraint firstItem="wYr-Rd-Nfa" firstAttribute="top" secondItem="tq3-1P-84U" secondAttribute="bottom" constant="8" id="jEZ-Dv-6Vv"/>
                             <constraint firstItem="wYr-Rd-Nfa" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="oRI-qj-tnN"/>
                             <constraint firstItem="Nml-jm-teH" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="wex-rr-Jar"/>
+                            <constraint firstItem="k67-Y7-4Yq" firstAttribute="top" secondItem="wYr-Rd-Nfa" secondAttribute="bottom" constant="8" id="y8T-tu-K3z"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ADW-0L-Eln" appends="YES" id="fdW-2R-uXp"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
+                        <outlet property="imageView" destination="NhQ-IO-4Ca" id="G0V-3O-aeY"/>
                         <outlet property="locationField" destination="wYr-Rd-Nfa" id="UKg-62-hh9"/>
                         <outlet property="nameField" destination="Nml-jm-teH" id="iKM-Rq-f8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f0J-k7-xf2">
+                    <connections>
+                        <action selector="choosePicture:" destination="JEX-9P-axG" id="tCL-7g-1gn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ADW-0L-Eln">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="JEX-9P-axG" id="CIs-ke-ytG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="709" y="129"/>
         </scene>
@@ -165,6 +201,9 @@
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="512" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>

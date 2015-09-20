@@ -127,8 +127,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     MyWhatsit *thing = self.things[indexPath.row];
-    cell.textLabel.text = thing.name;
+    cell.textLabel.text       = thing.name;
     cell.detailTextLabel.text = thing.location;
+    cell.imageView.image      = thing.viewImage;
     return cell;
 }
 

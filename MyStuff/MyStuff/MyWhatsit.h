@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define kWhatsitDidChangeNotification @"MyWhatsitDidChange"
 
@@ -14,6 +15,9 @@
 
 @property (strong,nonatomic) NSString *name;
 @property (strong,nonatomic) NSString *location;
+
+@property (strong,nonatomic) UIImage *image;
+@property (readonly,nonatomic) UIImage *viewImage;
 
 - (id)initWithName:(NSString*)name location:(NSString*)location;
 - (void)postDidChangeNotification;
