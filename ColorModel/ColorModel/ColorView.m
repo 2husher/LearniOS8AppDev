@@ -15,6 +15,9 @@
     CGImageRef hsImageRef;
     float brightness;
 }
+
+- (void)changeHSToPoint:(CGPoint)point;
+
 @end
 
 @implementation ColorView
@@ -87,6 +90,31 @@
     circle.lineWidth = 3;
     [[UIColor blackColor] setStroke];
     [circle stroke];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self changeHSToPoint:[(UITouch*)[touches anyObject] locationInView:self]];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self changeHSToPoint:[(UITouch*)[touches anyObject] locationInView:self]];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self changeHSToPoint:[(UITouch*)[touches anyObject] locationInView:self]];
+}
+
+- (void)changeHSToPoint:(CGPoint)point
+{
+    CGRect bounds = self.bounds;
+    if (CGRectContainsPoint(bounds,point))
+    {
+        _colorModel.hue = (point.x-bounds.origin.x)/bounds.size.width*360;
+        _colorModel.saturation = (point.y-bounds.origin.y)/bounds.size.height*100;
+    }
 }
 
 /*

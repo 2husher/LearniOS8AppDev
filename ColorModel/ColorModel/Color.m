@@ -18,4 +18,9 @@
                            alpha:1];
 }
 
++ (NSSet *)keyPathsForValuesAffectingColor
+{
+    return [NSSet setWithObjects: @"hue", @"saturation", @"brightness", nil];
+}
+
 @end
